@@ -1,0 +1,272 @@
+  #################
+ # Virtual Box   #
+#################
+
+# this box is created to facilate the different direction
+
+#/gate/world/daughters/name v_box
+#/gate/world/daughters/insert box
+#/gate/v_box/geometry/setXLength  1 m
+#/gate/v_box/geometry/setYLength  1 m
+#/gate/v_box/geometry/setZLength 10 m
+#/gate/v_box/placement/setRotationAxis 1 0 0
+#/gate/v_box/placement/setRotationAngle  90 deg
+#/gate/v_box/placement/setTranslation 0 0 0 cm
+#/gate/v_box/placement/setTranslation 0 52.5 0 cm 
+#/gate/v_box/setMaterial Air
+#/gate/v_box/vis/setVisible 0
+#/gate/v_box/vis/setVisible 1
+#/gate/v_box/vis/forceWireframe
+#/gate/v_box/vis/setColor white
+
+  #################
+ # Vacuum Window #
+#################
+/gate/world/daughters/name vac_window
+/gate/world/daughters/insert box
+/gate/vac_window/geometry/setXLength 200 mm 
+/gate/vac_window/geometry/setYLength 200 mm
+/gate/vac_window/geometry/setZLength 10.0435 mm
+/gate/vac_window/placement/setTranslation 0 0 -4215.4625 mm 
+/gate/vac_window/setMaterial Vacuum
+/gate/vac_window/vis/setColor blue
+/gate/vac_window/vis/forceWireframe
+#
+# Repeat the vac_window
+##
+/gate/vac_window/repeaters/insert linear
+/gate/vac_window/linear/setRepeatNumber 2
+/gate/vac_window/linear/setRepeatVector 0. 0. 79.9565 mm
+#/gate/vac_window/linear/autoCenter true
+
+/gate/vac_window/daughters/name vac_window_H1
+/gate/vac_window/daughters/insert box
+/gate/vac_window_H1/geometry/setXLength 200 mm 
+/gate/vac_window_H1/geometry/setYLength 200 mm
+/gate/vac_window_H1/geometry/setZLength 0.075 mm
+/gate/vac_window_H1/placement/setTranslation 0 0 -5 mm 
+/gate/vac_window_H1/setMaterial Hostaphan
+/gate/vac_window_H1/vis/setColor green
+/gate/vac_window_H1/vis/forceSolid
+
+/gate/vac_window/daughters/name vac_window_K1
+/gate/vac_window/daughters/insert box
+/gate/vac_window_K1/geometry/setXLength 200 mm 
+/gate/vac_window_K1/geometry/setYLength 200 mm
+/gate/vac_window_K1/geometry/setZLength 0.012 mm
+/gate/vac_window_K1/placement/setTranslation 0 0 5 mm 
+/gate/vac_window_K1/setMaterial Kevlar
+/gate/vac_window_K1/vis/setColor white
+/gate/vac_window_K1/vis/forceSolid
+
+  #################
+ #  Ion Chamber  #
+#################
+/gate/world/daughters/name ion_chamber
+/gate/world/daughters/insert box
+/gate/ion_chamber/geometry/setXLength 200 mm 
+/gate/ion_chamber/geometry/setYLength 200 mm
+/gate/ion_chamber/geometry/setZLength 16.025 mm
+/gate/ion_chamber/placement/setTranslation 0 0 -3091.9875 mm 
+/gate/ion_chamber/setMaterial Vacuum
+/gate/ion_chamber/vis/setColor blue
+/gate/ion_chamber/vis/forceWireframe
+#
+# Repeat the ion_chamber
+##
+/gate/ion_chamber/repeaters/insert linear
+/gate/ion_chamber/linear/setRepeatNumber 3
+/gate/ion_chamber/linear/setRepeatVector 0. 0. 81.9875 mm
+#/gate/ion_chamber/linear/autoCenter true
+
+/gate/ion_chamber/daughters/name ion_chamber_A1
+/gate/ion_chamber/daughters/insert box
+/gate/ion_chamber_A1/geometry/setXLength 200 mm 
+/gate/ion_chamber_A1/geometry/setYLength 200 mm
+/gate/ion_chamber_A1/geometry/setZLength 0.025 mm
+/gate/ion_chamber_A1/placement/setTranslation 0 0 -8 mm 
+/gate/ion_chamber_A1/setMaterial Hostaphan
+/gate/ion_chamber_A1/vis/setColor white
+/gate/ion_chamber_A1/vis/forceSolid
+
+/gate/ion_chamber/daughters/name ion_chamber_A2
+/gate/ion_chamber/daughters/insert box
+/gate/ion_chamber_A2/geometry/setXLength 200 mm 
+/gate/ion_chamber_A2/geometry/setYLength 200 mm
+/gate/ion_chamber_A2/geometry/setZLength 0.025 mm
+/gate/ion_chamber_A2/placement/setTranslation 0 0 8 mm 
+/gate/ion_chamber_A2/setMaterial Hostaphan
+/gate/ion_chamber_A2/vis/setColor white
+/gate/ion_chamber_A2/vis/forceSolid
+
+/gate/ion_chamber/daughters/name ion_chamber_B1
+/gate/ion_chamber/daughters/insert box
+/gate/ion_chamber_B1/geometry/setXLength 200 mm 
+/gate/ion_chamber_B1/geometry/setYLength 200 mm
+/gate/ion_chamber_B1/geometry/setZLength 0.013 mm
+/gate/ion_chamber_B1/placement/setTranslation 0 0 -4 mm 
+/gate/ion_chamber_B1/setMaterial Hostaphan
+/gate/ion_chamber_B1/vis/setColor green
+/gate/ion_chamber_B1/vis/forceSolid
+#
+# Repeat the ion_chamber_B1
+##
+/gate/ion_chamber_B1/repeaters/insert linear
+/gate/ion_chamber_B1/linear/setRepeatNumber 2
+/gate/ion_chamber_B1/linear/setRepeatVector 0. 0. 4 mm
+
+/gate/ion_chamber/daughters/name ion_chamber_B2
+/gate/ion_chamber/daughters/insert box
+/gate/ion_chamber_B2/geometry/setXLength 200 mm 
+/gate/ion_chamber_B2/geometry/setYLength 200 mm
+/gate/ion_chamber_B2/geometry/setZLength 0.013 mm
+/gate/ion_chamber_B2/placement/setTranslation 0 0 4 mm 
+/gate/ion_chamber_B2/setMaterial Hostaphan
+/gate/ion_chamber_B2/vis/setColor green
+/gate/ion_chamber_B2/vis/forceSolid
+
+
+  #################
+ #  Ridge filter #
+#################
+#/control/execute mac/Ridge_filter.mac
+
+  ###############
+ #  Strip IC   #
+###############
+/gate/world/daughters/name strip_ion_chamber
+/gate/world/daughters/insert box
+/gate/strip_ion_chamber/geometry/setXLength 200 mm 
+/gate/strip_ion_chamber/geometry/setYLength 200 mm
+/gate/strip_ion_chamber/geometry/setZLength 24.025 mm
+/gate/strip_ion_chamber/placement/setTranslation 0 0 -1738.4875 mm 
+/gate/strip_ion_chamber/setMaterial Vacuum
+/gate/strip_ion_chamber/vis/setColor blue
+/gate/strip_ion_chamber/vis/forceWireframe
+#
+# Repeat the strip_ion_chamber
+##
+/gate/strip_ion_chamber/repeaters/insert linear
+/gate/strip_ion_chamber/linear/setRepeatNumber 2
+/gate/strip_ion_chamber/linear/setRepeatVector 0. 0. 135.975 mm
+
+/gate/strip_ion_chamber/daughters/name strip_A1
+/gate/strip_ion_chamber/daughters/insert box
+/gate/strip_A1/geometry/setXLength 200 mm 
+/gate/strip_A1/geometry/setYLength 200 mm
+/gate/strip_A1/geometry/setZLength 0.025 mm
+/gate/strip_A1/placement/setTranslation 0 0 -12 mm 
+/gate/strip_A1/setMaterial Hostaphan
+/gate/strip_A1/vis/setColor white
+/gate/strip_A1/vis/forceSolid
+
+/gate/strip_ion_chamber/daughters/name strip_A2
+/gate/strip_ion_chamber/daughters/insert box
+/gate/strip_A2/geometry/setXLength 200 mm 
+/gate/strip_A2/geometry/setYLength 200 mm
+/gate/strip_A2/geometry/setZLength 0.025 mm
+/gate/strip_A2/placement/setTranslation 0 0 12 mm 
+/gate/strip_A2/setMaterial Hostaphan
+/gate/strip_A2/vis/setColor white
+/gate/strip_A2/vis/forceSolid
+
+/gate/strip_ion_chamber/daughters/name strip_B1
+/gate/strip_ion_chamber/daughters/insert box
+/gate/strip_B1/geometry/setXLength 200 mm 
+/gate/strip_B1/geometry/setYLength 200 mm
+/gate/strip_B1/geometry/setZLength 0.013 mm
+/gate/strip_B1/placement/setTranslation 0 0 -8 mm 
+/gate/strip_B1/setMaterial Hostaphan
+/gate/strip_B1/vis/setColor green
+/gate/strip_B1/vis/forceSolid
+
+/gate/strip_ion_chamber/daughters/name strip_B2
+/gate/strip_ion_chamber/daughters/insert box
+/gate/strip_B2/geometry/setXLength 200 mm 
+/gate/strip_B2/geometry/setYLength 200 mm
+/gate/strip_B2/geometry/setZLength 0.013 mm
+/gate/strip_B2/placement/setTranslation 0 0 0 mm 
+/gate/strip_B2/setMaterial Hostaphan
+/gate/strip_B2/vis/setColor green
+/gate/strip_B2/vis/forceSolid
+
+/gate/strip_ion_chamber/daughters/name strip_B3
+/gate/strip_ion_chamber/daughters/insert box
+/gate/strip_B3/geometry/setXLength 200 mm 
+/gate/strip_B3/geometry/setYLength 200 mm
+/gate/strip_B3/geometry/setZLength 0.013 mm
+/gate/strip_B3/placement/setTranslation 0 0 8 mm 
+/gate/strip_B3/setMaterial Hostaphan
+/gate/strip_B3/vis/setColor green
+/gate/strip_B3/vis/forceSolid
+
+/gate/strip_ion_chamber/daughters/name strip_C1
+/gate/strip_ion_chamber/daughters/insert box
+/gate/strip_C1/geometry/setXLength 200 mm 
+/gate/strip_C1/geometry/setYLength 200 mm
+/gate/strip_C1/geometry/setZLength 0.25 mm
+/gate/strip_C1/placement/setTranslation 0 0 -4 mm 
+/gate/strip_C1/setMaterial Vacuum
+/gate/strip_C1/vis/setColor red
+/gate/strip_C1/vis/forceWireframe
+
+/gate/strip_C1/daughters/name strip_C1A
+/gate/strip_C1/daughters/insert box
+/gate/strip_C1A/geometry/setXLength 200 mm 
+/gate/strip_C1A/geometry/setYLength 200 mm
+/gate/strip_C1A/geometry/setZLength 0.2 mm
+/gate/strip_C1A/placement/setTranslation 0 0 -0.025 mm 
+/gate/strip_C1A/setMaterial Hostaphan
+/gate/strip_C1A/vis/setColor white
+/gate/strip_C1A/vis/forceSolid
+
+/gate/strip_C1/daughters/name strip_C1B
+/gate/strip_C1/daughters/insert box
+/gate/strip_C1B/geometry/setXLength 200 mm 
+/gate/strip_C1B/geometry/setYLength 200 mm
+/gate/strip_C1B/geometry/setZLength 0.05 mm
+/gate/strip_C1B/placement/setTranslation 0 0 0.1 mm 
+/gate/strip_C1B/setMaterial Copper
+/gate/strip_C1B/vis/setColor green
+/gate/strip_C1B/vis/forceSolid
+
+/gate/strip_ion_chamber/daughters/name strip_C2
+/gate/strip_ion_chamber/daughters/insert box
+/gate/strip_C2/geometry/setXLength 200 mm 
+/gate/strip_C2/geometry/setYLength 200 mm
+/gate/strip_C2/geometry/setZLength 0.25 mm
+/gate/strip_C2/placement/setTranslation 0 0 4 mm 
+/gate/strip_C2/setMaterial Vacuum
+/gate/strip_C2/vis/setColor red
+/gate/strip_C2/vis/forceWireframe
+
+/gate/strip_C2/daughters/name strip_C2A
+/gate/strip_C2/daughters/insert box
+/gate/strip_C2A/geometry/setXLength 200 mm 
+/gate/strip_C2A/geometry/setYLength 200 mm
+/gate/strip_C2A/geometry/setZLength 0.2 mm
+/gate/strip_C2A/placement/setTranslation 0 0 -0.025 mm 
+/gate/strip_C2A/setMaterial Hostaphan
+/gate/strip_C2A/vis/setColor white
+/gate/strip_C2A/vis/forceSolid
+
+/gate/strip_C2/daughters/name strip_C2B
+/gate/strip_C2/daughters/insert box
+/gate/strip_C2B/geometry/setXLength 200 mm 
+/gate/strip_C2B/geometry/setYLength 200 mm
+/gate/strip_C2B/geometry/setZLength 0.05 mm
+/gate/strip_C2B/placement/setTranslation 0 0 0.1 mm 
+/gate/strip_C2B/setMaterial Copper
+/gate/strip_C2B/vis/setColor green
+/gate/strip_C2B/vis/forceSolid
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+# ---------------------------------------
+# Patient
+# ---------------------------------------
+
+/gate/world/daughters/name target
+/gate/world/daughters/insert box
+/gate/target/setMaterial Water
+/gate/target/placement/setTranslation 0 0 0 mm
+/gate/target/geometry/setXLength 20 cm
+/gate/target/geometry/setYLength 20 cm
+/gate/target/geometry/setZLength 20 cm
+/gate/target/vis/forceSolid
+/gate/target/vis/setColor blue
+
+### rotate the patient
+#/gate/patient/placement/setRotationAxis 1 0 0
+#/gate/patient/placement/setRotationAngle -90 deg

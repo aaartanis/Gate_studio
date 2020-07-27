@@ -1,0 +1,25 @@
+#reference:example6,example2
+
+###Generate materials from Hounsfiled units
+/gate/HounsfiledMaterialGenerator/SetMaterialTable                  data/Schneider2000MaterialsTable.txt
+/gate/HounsfiledMaterialGenerator/SetDensityTable                   data/Schneider2000DensitiesTable.txt
+/gate/HounsfiledMaterialGenerator/SetDensityTolerance               0.1 g/cm3
+/gate/HounsfiledMaterialGenerator/SetOutputMaterialDatabaseFilename data/patient-HUmaterials.db
+/gate/HounsfiledMaterialGenerator/SetOutputHUMaterialFilename       data/patient-HU2mat.txt
+/gate/HounsfiledMaterialGenerator/Generate
+
+### Insert image
+
+gate/world/daughters/name           target
+gate/world/daughters/insert         ImageNestedParametrisedVolume
+#/gate/world/daughters/insert       ImageRegionalizedVolume
+
+/gate/geometry/setMaterialDatabase          data/patient-HUmaterials.db
+/gate/target/geometry/setHUToMaterialFile   data/patient-HU2mat.txt
+/gate/target/geometry/setImage              data/patient-4mm.mhd
+
+/gate/target/placement/setTranslation 0. 0. 0. mm
+
+### rotate the patient
+/gate/target/placement/setRotationAxis 1 0 0
+/gate/target/placement/setRotationAngle -90 deg
