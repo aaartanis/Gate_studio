@@ -68,7 +68,7 @@
 /gate/ion_chamber/geometry/setYLength 200 mm
 /gate/ion_chamber/geometry/setZLength 16.025 mm
 /gate/ion_chamber/placement/setTranslation 0 0 -3091.9875 mm 
-/gate/ion_chamber/setMaterial Vacuum
+/gate/ion_chamber/setMaterial N2
 /gate/ion_chamber/vis/setColor blue
 /gate/ion_chamber/vis/forceWireframe
 #
@@ -140,7 +140,7 @@
 /gate/strip_ion_chamber/geometry/setYLength 200 mm
 /gate/strip_ion_chamber/geometry/setZLength 24.025 mm
 /gate/strip_ion_chamber/placement/setTranslation 0 0 -1738.4875 mm 
-/gate/strip_ion_chamber/setMaterial Vacuum
+/gate/strip_ion_chamber/setMaterial N2
 /gate/strip_ion_chamber/vis/setColor blue
 /gate/strip_ion_chamber/vis/forceWireframe
 #
@@ -206,7 +206,7 @@
 /gate/strip_C1/geometry/setYLength 200 mm
 /gate/strip_C1/geometry/setZLength 0.25 mm
 /gate/strip_C1/placement/setTranslation 0 0 -4 mm 
-/gate/strip_C1/setMaterial Vacuum
+/gate/strip_C1/setMaterial N2
 /gate/strip_C1/vis/setColor red
 /gate/strip_C1/vis/forceWireframe
 
@@ -236,7 +236,7 @@
 /gate/strip_C2/geometry/setYLength 200 mm
 /gate/strip_C2/geometry/setZLength 0.25 mm
 /gate/strip_C2/placement/setTranslation 0 0 4 mm 
-/gate/strip_C2/setMaterial Vacuum
+/gate/strip_C2/setMaterial N2
 /gate/strip_C2/vis/setColor red
 /gate/strip_C2/vis/forceWireframe
 
