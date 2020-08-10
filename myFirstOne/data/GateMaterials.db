@@ -48,6 +48,13 @@ Bismuth:    S= Bi  ; Z= 83. ; A= 208.98  g/mole
 Uranium:    S= U   ; Z= 92. ; A= 238.03  g/mole
 
 [Materials]
+
+FR4: d=1.9 mg/cm3 ; n=4; state=solid
+	+el: name=Carbon;     f=0.6872
+	+el: name=Hydrogen;   f=0.0593
+	+el: name=Oxygen;     f=0.2235
+	+el: name=Silicon;    f=0.0297
+
 Vacuum: d=0.000001 mg/cm3 ; n=1 
 	+el: name=Hydrogen ; n=1
 
