@@ -216,7 +216,7 @@
 /gate/strip_C1A/geometry/setYLength 200 mm
 /gate/strip_C1A/geometry/setZLength 0.2 mm
 /gate/strip_C1A/placement/setTranslation 0 0 -0.025 mm 
-/gate/strip_C1A/setMaterial Hostaphan
+/gate/strip_C1A/setMaterial FR4
 /gate/strip_C1A/vis/setColor white
 /gate/strip_C1A/vis/forceSolid
 
@@ -246,7 +246,7 @@
 /gate/strip_C2A/geometry/setYLength 200 mm
 /gate/strip_C2A/geometry/setZLength 0.2 mm
 /gate/strip_C2A/placement/setTranslation 0 0 -0.025 mm 
-/gate/strip_C2A/setMaterial Hostaphan
+/gate/strip_C2A/setMaterial FR4
 /gate/strip_C2A/vis/setColor white
 /gate/strip_C2A/vis/forceSolid
 
